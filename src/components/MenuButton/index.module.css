@@ -1,0 +1,10 @@
+.HeaderButton {
+    cursor: pointer;
+    margin: .5em;
+    height: 1rem;
+    text-decoration: none;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: nowrap;
+    user-select: none;
+}
