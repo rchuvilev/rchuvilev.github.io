@@ -5,7 +5,7 @@ export type TCareerBlockProps = {
 
 };
 
-export const CareerBlock = ({}: TCareerBlockProps) => {
+export const CvCareerBlock = ({}: TCareerBlockProps) => {
     return (
         <div className={classNames(styles.CareerBlock)}>
             <h1>CareerBlock</h1>

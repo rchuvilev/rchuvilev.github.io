@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^4.5.1",
+    "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.1",
-    "@signal-noise/react-shader-canvas": "^0.0.3",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",

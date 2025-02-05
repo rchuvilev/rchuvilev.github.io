@@ -1,10 +1,31 @@
 .HeaderButton {
+    --font-size: .75rem;
+
     cursor: pointer;
-    margin: .5em;
-    height: 1rem;
     text-decoration: none;
     box-shadow: none;
     display: flex;
     flex-wrap: nowrap;
     user-select: none;
+    color: var(--color-link);
+    font-size: var(--font-size);
+    gap: 0;
+}
+
+a.HeaderButton,
+p.HeaderButton {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: calc(var(--font-size) / 3);
+    justify-content: flex-start;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.HeaderButton svg {
+    width: var(--font-size);
+    height: var(--font-size);
 }

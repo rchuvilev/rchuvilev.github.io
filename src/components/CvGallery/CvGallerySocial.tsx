@@ -4,11 +4,11 @@ import Autoplay from 'embla-carousel-autoplay'
 import styles from './index.module.css';
 import classNames from "classnames";
 
-export type TGallerySocialProps = {
+export type TCvGalleryProps = {
 
 };
 
-export const GallerySocial = ({}: TGallerySocialProps) => {
+export const CvGallery = ({}: TCvGalleryProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
     useEffect(() => {

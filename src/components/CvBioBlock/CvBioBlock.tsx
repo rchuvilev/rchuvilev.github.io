@@ -1,11 +1,11 @@
 import styles from './index.module.css';
 import classNames from "classnames";
 
-export type TBioBlockProps = {
+export type TCvBioBlockProps = {
 
 };
 
-export const BioBlock = ({}: TBioBlockProps) => {
+export const CvBioBlock = ({}: TCvBioBlockProps) => {
     return (
         <div className={classNames(styles.BioBlock)}>
             <h1>BioBlock</h1>
