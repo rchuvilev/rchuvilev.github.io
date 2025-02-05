@@ -85,21 +85,22 @@ main {
         min-height: 297mm;
         padding: 0 0 5mm 15mm;
     }
+
     & > * {
-      max-width: 100%;
+        max-width: 100%;
     }
-    /* Mode setup */
-    @media screen {
-        &, & ~ * {
+}
+
+/* Mode setup */
+@media screen {
+    body:has(.__dark) > * {
+        &, & .inverted {
+            filter: invert(1) !important;
             background-color: white;
-        }
-        &.__dark {
-            &, & ~ *, img, video, .inverted {
-                filter: invert(1);
-            }
         }
     }
 }
+
 @media screen {
     body {
         background-color: white;
@@ -119,6 +120,7 @@ html, body {
 main {
     width: 100%;
     min-height: 100vh;
+
     &, & ~ * {
         margin: 0 auto;
         display: flex;
@@ -191,4 +193,21 @@ main {
 /* Features styles */
 .__kyc-mobile .BcgGlslPurple {
     display: none;
+}
+
+.__kyc-mobile #react-scan-root {
+    display: none;
+}
+
+:root > #utilMeasureFPS,
+.__kyc-desktop #utilMeasureFPS {
+    /*position: fixed !important;
+    transform: scale(2) translate(-25%, -25%);
+    @media screen and (max-width: 767px) {
+        transform: none;
+    }*/
+    *, * canvas {
+        width: auto !important;
+        height: 2.5rem !important;
+    }
 }

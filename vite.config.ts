@@ -4,7 +4,7 @@ import path from "path";
 import {defineConfig} from "vite";
 
 export default defineConfig({
-  base: './', // for gh-pages env
+  base: './', // for gh-PageViews env
   plugins: [
     react(),
     tailwindcss(),

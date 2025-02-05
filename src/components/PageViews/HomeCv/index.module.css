@@ -1,0 +1,23 @@
+.FlexLayout {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.LayoutPart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    & > * {
+        width: 100%;
+    }
+}
+
+.LeftSection {
+    width: 70%;
+}
+
+.RightAside {
+    width: 30%;
+    padding-left: .5rem;
+}

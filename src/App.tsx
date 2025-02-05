@@ -1,17 +1,29 @@
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
 import {ErrorBoundary} from 'react-error-boundary';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import {TemplateFooter} from './template/Footer/TemplateFooter';
-import {TemplateHeader} from './template/Header/TemplateHeader';
-import {TemplatePage} from './template/Page/TemplatePage';
-import {AppContext, useStore} from "@/effects/useStore.tsx";
+import {TemplateFooter} from '@/components/Template/Footer/TemplateFooter';
+import {TemplateHeader} from '@/components/Template/Header/TemplateHeader';
+import {TemplatePage} from '@/components/Template/Page/TemplatePage';
+import {AppContext, useAppState} from "@/effects/useAppState.tsx";
+
+import './index.css';
+import {TemplateHelmet} from "@/components/Template/Helmet/Helmet.tsx";
+
+createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+        <App />
+    </StrictMode>,
+);
 
 function App() {
-    const {appState, setAppState} = useStore();
+    const {appState, setAppState} = useAppState();
 
     return (
         <ErrorBoundary fallbackRender={({error}) => <div>{error.message}</div>}>
             <AppContext.Provider value={{appState, setAppState}}>
+                <TemplateHelmet isDev={appState.isDev}/>
                 <TemplateHeader/>
                 {/*<BcgGlslPurple />*/}
                 <BrowserRouter>
@@ -28,3 +40,4 @@ function App() {
 }
 
 export default App;
+

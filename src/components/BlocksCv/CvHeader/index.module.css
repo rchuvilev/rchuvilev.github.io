@@ -1,0 +1,142 @@
+.CvHeader {
+    --contacts-font-size: 0.5rem;
+    --contacts-line-height: 1.5;
+
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-bottom: .5rem;
+
+    & > * {
+        padding: 0;
+    }
+}
+
+.Photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 20%;
+    height: auto;
+    aspect-ratio: 3/4;
+    background: url("/assets/cv/photo.jpg");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: .25rem;
+    /*margin-bottom: calc(var(--contacts-font-size) * var(--contacts-line-height) * 1.5);*/
+}
+
+.Info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 .5rem;
+}
+
+.Name, .Role {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.Name {
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.Role {
+    font-weight: normal;
+    margin-bottom: auto;
+}
+
+.Contacts {
+    width: 100%;
+    display: flex;
+    gap: .25rem;
+    margin-top: auto;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+
+    & li {
+        padding: 0;
+    }
+
+    & a {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: .125rem;
+        align-items: center;
+    }
+
+    & span {
+        font-size: var(--contacts-font-size);
+        line-height: var(--contacts-line-height);
+        white-space: nowrap;
+    }
+
+    & svg {
+        width: var(--contacts-font-size);
+        height: var(--contacts-font-size);
+    }
+}
+
+.QrOrBtns {
+    width: 20%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 319px) {
+    .QrOrBtns {
+        display: none;
+    }
+    .Info {
+        width: 80%;
+    }
+}
+
+.QrCode {
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    transform: scale(.75);
+}
+
+.QrCode img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.QrCode p {
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    font-size: .85rem;
+    color: #19417E;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 319px) {
+    .Photo {
+        width: 30%;
+    }
+    .Info {
+        width: 70%;
+    }
+    .QrOrBtns {
+        display: none;
+    }
+}

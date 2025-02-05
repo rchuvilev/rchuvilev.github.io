@@ -1,7 +1,0 @@
-.ModeButton {
-    cursor: pointer;
-    transform: scale(1.35);
-    margin: 0 0 0 auto;
-    margin-bottom: .5rem;
-    box-shadow: 1px 1px 1px 1px var(--color-link);
-}
