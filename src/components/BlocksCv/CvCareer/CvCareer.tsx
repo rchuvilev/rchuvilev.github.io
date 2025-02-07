@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} from "@/components/ui/card";
 import sharedStyles from "@/components/styles.shared.module.css";
 import styles from "./index.module.css";
 
@@ -141,21 +142,21 @@ export const CvCareer = ({}: TCareerProps) => {
                 return (
                     <>
                         {hasBreak && <h5 className={classNames(styles.CompanyBreak, {['__screen-only']: item.optional})}>~~{item.company}~~</h5>}
-                        <article key={`job-article-${index}`} className={classNames(styles.Card, {'__screen-only': item.optional})}>
-                            <header className={classNames(styles.CardHeader)}>
-                                <h4 className={classNames(styles.CardTitle)}>{job}</h4>
-                                <p className={classNames(styles.CardDescription)}>{dates}</p>
-                            </header>
-                            <div className={classNames(styles.CardContent)}>
+                        <Card key={`job-article-${index}`} className={classNames(styles.Card, {'__screen-only': item.optional})}>
+                            <CardHeader className={classNames(styles.CardHeader)}>
+                                <CardTitle className={classNames(styles.CardTitle)}>{job}</CardTitle>
+                                <CardDescription className={classNames(styles.CardDescription)}>{dates}</CardDescription>
+                            </CardHeader>
+                            <CardContent className={classNames(styles.CardContent)}>
                                 {description()}
                                 {stack && <><p><i><strong>Stack:&nbsp;</strong>{stack}</i></p></>}
-                            </div>
+                            </CardContent>
                             {additional?.length || 0 >= 0 && (
-                                <footer className={classNames('__screen-only', styles.CardFooter)}>
+                                <CardFooter className={classNames('__screen-only', styles.CardFooter)}>
                                     {...additional()}
-                                </footer>
+                                </CardFooter>
                             )}
-                        </article>
+                        </Card>
                     </>
                 );
             })}

@@ -20,7 +20,7 @@
         text-align: left;
         white-space: nowrap;
         line-height: 1.25;
-        padding: .5lh 0;
+        padding: 0 0 .5lh 0;
     }
 
     & p {

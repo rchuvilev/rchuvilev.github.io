@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    padding-bottom: .5rem;
+    padding-bottom: var(--font-size);
 
     & > * {
         padding: 0;
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     padding: 0 .5rem;
 }
@@ -42,35 +42,34 @@
 .Name, .Role {
     width: 100%;
     white-space: nowrap;
+    line-height: 1;
 }
 
 .Name {
     font-weight: bold;
-    margin-top: auto;
 }
 
 .Role {
     font-weight: normal;
-    margin-bottom: auto;
 }
 
 .Contacts {
     width: 100%;
     display: flex;
-    gap: .25rem;
     margin-top: auto;
     margin-bottom: 0;
     flex-wrap: wrap;
 
     & li {
         padding: 0;
+        margin-right: .25rem;
     }
 
     & a {
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
         gap: .125rem;
-        align-items: center;
     }
 
     & span {
@@ -110,18 +109,26 @@
 
 @media print {
     :root {
-        --header-height: 40mm;
+        --header-height: 30mm;
         --qr-font-size: 5mm;
+        --font-size: 6mm;
     }
     html, body {
         background: gray;
     }
     main {
         background: white;
-        padding: 0 !important;
+        padding: 10mm 5mm 25mm 20mm;
+        padding: 0;
+        max-height: 297mm;
+        overflow: hidden;
+        border: none;
     }
     .CvHeader, .Info, .Photo {
         height: var(--header-height);
+    }
+    .CvHeader > *:not(.QrCode) {
+        transform: scale(.8) translate(-10%, -10%);
     }
     .Name, .Role {
         font-size: calc(var(--qr-font-size) * 2);
@@ -142,12 +149,13 @@
         align-items: flex-start;
     }
 
-
     .QrCode {
         width: 100%;
         height: 100%;
         align-items: center;
         justify-items: center;
+        position: fixed;
+        right: 0;
     }
 
     .QrCode img {
