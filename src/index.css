@@ -28,23 +28,14 @@
     --width-card: 285px;
     --width-card-medium: 460px;
     --width-card-wide: 800px;
-    --width-content: 1080px;
+    --width-content: 100vw;
 }
 
 /* Dynamic font size */
 :root {
     font-size: calc(12px + 1.5vw);
-    --width-content: 100vw;
-    @media (orientation: landscape) and (min-width: 1280px) {
-        & {
-            --width-content: calc(210mm + 5vw * 2);
-            min-width: 100vmin;
-        }
-
-        & .BcgGlslPurple {
-            display: block;
-        }
-    }
+    --width-content: calc(100vw - (100vw - 100vmin) / 2);
+    --font-size: .5rem;
 }
 
 * {

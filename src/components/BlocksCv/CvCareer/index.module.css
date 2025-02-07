@@ -1,3 +1,76 @@
 .CvCareer {
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--font-size);
+    padding-left: .125rem;
+    & * {
+        font-size: var(--font-size) !important;
+    }
+
+    & strong {
+        font-weight: bold;
+    }
+    & h4 {
+        padding: 0;
+    }
+}
+
+.CardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    padding-top: .5rem;
+    padding-bottom: .25rem;
+    padding-left: .5rem;
+    padding-right: 0;
+}
+
+.CardTitle {
+    font-weight: bold;
+    white-space: nowrap;
+    width: auto;
+}
+
+.CardDescription {
+    width: auto;
+    display: flex;
+    white-space: nowrap;
+
+}
+
+.CardContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: .5rem;
+    padding-top: .25rem;
+    border-top: 1px dashed var(--color-text);
+
+}
+
+.CardFooter {
+    height: auto;
+    padding: 0;
+
+}
+
+.CardAdditipnalP {
+
+}
+
+.CompanyBreak {
+    font-size: 1.5rem;
 }
