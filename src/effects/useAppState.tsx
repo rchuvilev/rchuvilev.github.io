@@ -3,11 +3,13 @@ import {createContext, useEffect, useState} from "react";
 export type TAppState = {
     isDev: boolean;
     isDarkMode: boolean;
+    isFancyMode?: boolean;
 };
 
 export const appStateInitial: TAppState = {
     isDev: window.location.hostname === 'localhost' || window.location.search.includes('devMode'),
     isDarkMode: localStorage?.getItem?.('darkScheme') === 'true' ? true : window?.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false,
+    isFancyMode: true,
 };
 
 

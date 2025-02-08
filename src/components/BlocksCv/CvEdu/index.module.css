@@ -63,12 +63,20 @@
 .CertificateLink {
     width: 100%;
     aspect-ratio: 4 / 2;
+    background-color: white;
     background-image: var(--image-url);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transform: none !important;
     filter: none !important;
+    border-radius: .25rem;
+
+    @media print {
+        & {
+            display: none;
+        }
+    }
 }
 
 .__disabled {

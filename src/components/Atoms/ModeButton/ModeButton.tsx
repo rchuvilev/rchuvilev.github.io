@@ -9,8 +9,8 @@ export const ModeButton = () => {
     const { isDarkMode } = appState;
     const clickHandler = () => {
         localStorage.setItem('darkScheme', String(Boolean(!isDarkMode)));
-        setAppState({...appState, ...{isDarkMode: !isDarkMode}});
-
+        const next = !isDarkMode;
+        setAppState({...appState, ...{isDarkMode: next, ...{isFancyMode: !next && appState.isFancyMode}}});
     };
     return (
         <Button className={styles.ModeButton} asChild={true} onClick={clickHandler}>

@@ -122,6 +122,32 @@ main {
     }
 }
 
+/* GLSL bcg support */
+#root main {
+    & ~ .BcgGlslPurple {
+        display: none;
+    }
+
+    @media print {
+        & {
+            background-color: white !important;
+        }
+        & ~ .BcgGlslPurple {
+            display: none !important;
+        }
+    }
+    &.__glsl-on:not(.__dark) {
+        & ~ .BcgGlslPurple {
+            display: block;
+        }
+        &, & ~ header, & ~ footer {
+            background-color: rgba(255, 255, 255, .3);
+            filter: brightness(var(--active-brightness)) contrast(1.2);
+            backdrop-filter: blur(5px);
+        }
+    }
+}
+
 /* Tailwind config */
 
 @layer base {

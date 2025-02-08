@@ -108,8 +108,8 @@ export const BcgGlslPurple = ({fragmentShaderSource}: any) => {
             height={height / 100}
             className="BcgGlslPurple"
             style={{
-                minWidth: `${width}px`,
-                minHeight: `${height}px`,
+                minWidth: `100vw`,
+                minHeight: `100vh`,
                 position: 'fixed',
                 top: 0,
                 left: 0,

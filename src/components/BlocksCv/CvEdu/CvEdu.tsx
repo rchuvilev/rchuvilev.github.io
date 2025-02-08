@@ -161,7 +161,7 @@ export const CvEdu = ({}: TCvEduProps) => {
                         </AccordionTrigger>
                         <AccordionContent className={styles.AccordionContent} style={{['--image-url' as string]: `url(${item.imageUrl})`,}}>
                             <a
-                                className={classNames(styles.CertificateLink, {[styles.__disabled]: !item.link})}
+                                className={classNames(styles.CertificateLink, 'inverted', {[styles.__disabled]: !item.link})}
                                 href={item.link ?? '#'}
                                 target="_blank"
                                 rel="noreferrer"

@@ -3,4 +3,5 @@
     height: 100%;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px var(--color-link);
+    background-color: white;
 }

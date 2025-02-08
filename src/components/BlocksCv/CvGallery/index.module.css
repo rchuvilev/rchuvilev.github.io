@@ -21,6 +21,7 @@
     overflow: hidden;
     user-select: none;
     filter: none !important;
+    background-color: white;
 
     &, &:before {
         border-radius: .25rem;
@@ -34,7 +35,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        z-index: 1;
+        z-index: 2;
         background-color: transparent;
         box-shadow: inset 0 0 1px 1px dimgray !important;
     }
@@ -62,7 +63,7 @@
         margin: 0;
         padding: 0;
         position: relative;
-        z-index: -1;
+        z-index: 1;
     }
 
     .Badge {
