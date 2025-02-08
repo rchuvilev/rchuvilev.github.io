@@ -173,3 +173,14 @@
         font-weight: bold;
     }
 }
+
+.HR {
+    display: none;
+}
+
+@media screen {
+    .HR {
+        display: block;
+        margin: .5rem 0;
+    }
+}

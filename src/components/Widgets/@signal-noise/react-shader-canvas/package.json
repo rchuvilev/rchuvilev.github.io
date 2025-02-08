@@ -1,0 +1,76 @@
+{
+  "name": "@signal-noise/react-shader-canvas",
+  "description": "A React functional component to display a simple WebGL shader.",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "homepage": "https://github.com/signal-noise/react-shader-canvas#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signal-noise/react-shader-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/signal-noise/react-shader-canvas/issues"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "webgl",
+    "shader",
+    "view"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "test:serve": "webpack-dev-server --mode development --open true",
+    "prepublish": "npm run build",
+    "release": "np",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:import": "import-sort -l \"src/**/*.{js,jsx}\"",
+    "lint:format": "prettier \"**/*.{js,md}\" --check",
+    "fix": "npm-run-all --sequential fix:*",
+    "fix:js": "eslint \"**/*.js\" --fix",
+    "fix:import": "import-sort --write \"src/**/*.{js,jsx}\"",
+    "fix:format": "prettier \"**/*.{js,md}\" --write"
+  },
+  "author": "John Chipps-Harding (john@signal-noise.com)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-parser-babylon": "^6.0.0",
+    "import-sort-style-module": "^6.0.0",
+    "jest": "^24.9.0",
+    "jest-image-snapshot": "^2.11.0",
+    "jest-puppeteer": "^4.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "puppeteer": "^2.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-test-renderer": "^16.11.0",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "glslCanvas": "^0.1.7"
+  }
+}

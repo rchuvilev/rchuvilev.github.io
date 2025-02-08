@@ -1,9 +1,7 @@
 // @ts-ignore
-import ShaderCanvas from '@signal-noise/react-shader-canvas';
-import {useResize} from "@/effects/useResize.js";
+import ShaderCanvas from './@signal-noise/react-shader-canvas/dist/index.es';
 
 export const BcgGlslPurple = ({fragmentShaderSource}: any) => {
-    const [width, height] = useResize();
     const fragmentShader = fragmentShaderSource || `
     #ifdef GL_ES
     precision mediump float;
@@ -103,9 +101,8 @@ export const BcgGlslPurple = ({fragmentShaderSource}: any) => {
     `;
 
     return (
+        // @ts-ignore
         <ShaderCanvas
-            width={width / 100}
-            height={height / 100}
             className="BcgGlslPurple"
             style={{
                 minWidth: `100vw`,

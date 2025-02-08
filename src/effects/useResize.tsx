@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 
-let RESIZE_TO: any = null;
 
 export const useResize = (callback?: any) => {
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [height, setHeight] = useState<number>(window.innerHeight);
+    let RESIZE_TO: any = null;
     useEffect(() => {
         const onResize = () => {
             setWidth(window.innerWidth);

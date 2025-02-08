@@ -25,8 +25,7 @@ export const MenuButton = ({href, text, target, isButton, onClick, icon}: THeade
             </a>
         ) : (
             <p
-                onClick={(ev: SyntheticEvent) => {
-                    onClick && ev.preventDefault();
+                onClick={() => {
                     onClick && onClick();
                 }}>
                 {icon}{/*&nbsp;*/}{text}

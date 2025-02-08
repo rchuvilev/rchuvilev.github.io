@@ -1,4 +1,4 @@
-import {StrictMode} from 'react';
+import {StrictMode, useEffect} from 'react';
 import {createRoot} from 'react-dom/client';
 import {ErrorBoundary} from 'react-error-boundary';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -10,6 +10,7 @@ import {AppContext, useAppState} from "@/effects/useAppState.tsx";
 
 import './index.css';
 import {TemplateHelmet} from "@/components/Template/Helmet/Helmet.tsx";
+import {useResize} from "@/effects/useResize.tsx";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -19,6 +20,10 @@ createRoot(document.getElementById('root')!).render(
 
 function App() {
     const {appState, setAppState} = useAppState();
+    const [width, height] = useResize();
+    useEffect(() => {
+        setAppState({...appState, ...{isFancyMode: width > 1024}});
+    }, [width, height]);
 
     return (
         <ErrorBoundary fallbackRender={({error}) => <div>{error.message}</div>}>
