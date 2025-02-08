@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 import classNames from "classnames";
 import {CvProfile} from "@/components/BlocksCv/CvProfile/CvProfile.tsx";
 import {CvCareer} from "@/components/BlocksCv/CvCareer/CvCareer.tsx";
+import {CvEdu} from "@/components/BlocksCv/CvEdu/CvEdu.tsx";
 
 export type TPageHomeProps = {};
 
@@ -18,9 +19,7 @@ export const PageHomeCv = ({}: TPageHomeProps) => {
                     <CvCareer />
                 </div>
                 <aside className={classNames(styles.LayoutPart, styles.RightAside)}>
-                    <p>Cert</p>
-                    <p>Cert</p>
-                    <p>Cert</p>
+                    <CvEdu />
                 </aside>
             </div>
         </>

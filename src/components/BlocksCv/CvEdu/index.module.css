@@ -1,0 +1,81 @@
+.CvEdu {
+    width: 100%;
+
+    & h2 {
+        font-size: .75rem !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+        margin: 0 auto;
+    }
+}
+
+.Accordion {
+    --image-url: url("");
+    height: auto;
+
+    @media print {
+        & {
+            transform: scale(.5) translate(-25%, -50%);
+        }
+    }
+}
+
+.AccordionItem {
+    margin-top: .25rem;
+    width: 100%;
+}
+
+.AccordionTrigger {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    border: none;
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    margin: .25rem 0;
+    cursor: pointer;
+
+    &, & * {
+        font-size: .5rem !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+    }
+
+    & svg {
+        height: .5lh;
+        width: auto;
+        stroke: black;
+
+        @media print {
+            & {
+                display: none;
+            }
+        }
+    }
+}
+
+.AccordionContent {
+    width: 100%;
+    height: auto;
+}
+
+.CertificateLink {
+    width: 100%;
+    aspect-ratio: 4 / 2;
+    background-image: var(--image-url);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: none !important;
+    filter: none !important;
+}
+
+.__disabled {
+    pointer-events: none;
+    cursor: initial;
+
+    &.AccordionTrigger svg {
+        visibility: hidden;
+    }
+}
