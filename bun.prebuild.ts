@@ -11,7 +11,6 @@ Object.keys(toBuild).forEach(async (filePath) => {
     const parsedPath = path.parse(filePath);
     const fileNameNoExt = parsedPath.name;
     const fileDest = toBuild[filePath] + fileNameNoExt + '.js';
-    console.log(111111, filePath, fileDest);
     const proc = await Bun.spawn([
         ...(`bun build ${filePath} --outdir=${toBuild[filePath]} --target=browser --minify`).split(' ')
     ]);

@@ -86,3 +86,45 @@
     padding: 0 !important;
     margin: .5rem 0 !important;
 }
+
+.Achievements, .Achievement {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    cursor: initial;
+    padding-left: 1rem;
+
+    @media print {
+        & {
+            padding-left: 0;
+        }
+    }
+}
+
+.Achievement, .AchievementLabel {
+    flex-direction: row;
+    font-size: var(--font-size);
+    line-height: 1.15;
+    font-weight: normal;
+    cursor: initial;
+}
+
+.AchievementCheckbox {
+    margin-right: .25rem;
+    position: relative;
+
+    &, & * {
+        display: block;
+        width: var(--font-size);
+        height: var(--font-size);
+        transform: translate(-2%, -1%);
+    }
+}
+
+.AchievementLabel {
+}

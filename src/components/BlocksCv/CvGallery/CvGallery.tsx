@@ -16,7 +16,7 @@ type TSlide = {
 };
 const slides: TSlide[] = [
     {
-        imageUrl: '',
+        imageUrl: '/assets/cv/feedback4.png',
         badge: 'From ex-Arkadium, Amazon',
         href: 'https://www.linkedin.com/in/atvdev/'
     },
@@ -27,12 +27,12 @@ const slides: TSlide[] = [
     },
     {
         imageUrl: '/assets/cv/feedback1.png',
-        badge: 'Freelance forged',
+        badge: 'From feelance forged friend',
         href: 'https://www.linkedin.com/in/ivan-verkhoturov-181303124/'
     },
     {
         imageUrl: '/assets/cv/feedback3.png',
-        badge: 'Soft skills and team player',
+        badge: 'Productivity and team play',
         // href: 'https://recognizeapp.com/recognitions/fpqjjgc',
         resize: true,
     },
