@@ -4,12 +4,18 @@ export type TAppState = {
     isDev: boolean;
     isDarkMode: boolean;
     isFancyMode?: boolean;
+    featureToggleProcrasstinate?: boolean;
+    featureToggleMetrics?: boolean;
+    featureToggleAccess?: boolean;
 };
 
 export const appStateInitial: TAppState = {
     isDev: window.location.hostname === 'localhost' || window.location.search.includes('devMode'),
     isDarkMode: localStorage?.getItem?.('darkScheme') === 'true' ? true : window?.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false,
     isFancyMode: true,
+    featureToggleProcrasstinate: false,
+    featureToggleMetrics: false,
+    featureToggleAccess: false,
 };
 
 

@@ -39,7 +39,7 @@ const careerItems: TCareerItem[] = [
         company: 'Arkadium Inc',
         dates: 'Jun 2021 - Mar 2023',
         description: [
-            `Developed several sub-platforms for customer groups on the bank portal. Mentored younger devs.`,
+            `Stabilized platform handling 150+ client\'s game-sites. Evolved flagship site with enhanced analytics, community features, games rendering optimization. Added modules-based approach.`,
         ],
         product: 'https://www.arkadium.com/ https://edition.cnn.com/games https://games.washingtonpost.com/ https://www.gamelab.com/',
         stack: 'React 16, Redux, SASS, PostCSS, Webpack, Custom Node.js servers, Jest, Enzyme, App Insights',

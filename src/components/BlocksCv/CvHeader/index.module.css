@@ -21,11 +21,12 @@
     width: auto;
     height: 100%;
     aspect-ratio: 3/4;
-    background: url("/assets/cv/photo.jpg");
-    background-size: auto 100%;
+    background: url("/assets/cv/photo0.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: .25rem;
+    box-shadow: 0 0 1px 1px white;
     /*margin-bottom: calc(var(--contacts-font-size) * var(--contacts-line-height) * 1.5);*/
 }
 

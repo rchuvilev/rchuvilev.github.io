@@ -24,17 +24,15 @@ import {useResize} from "@/effects/useResize.tsx";
 import {ScrollArea} from "@/components/ui/scroll-area.tsx";
 import {CvProcrastinate} from "@/components/BlocksCv/CvProcrastinate/CvProcrastinate.tsx";
 
-export type TCvQrButtonsProps = {
-
-};
+export type TCvQrButtonsProps = {};
 
 export const CvQrButtons = ({}: TCvQrButtonsProps) => {
-    const { appState, setAppState } = useContext<TAppContext>(AppContext);
-    const { isDarkMode, isFancyMode } = appState;
+    const {appState, setAppState} = useContext<TAppContext>(AppContext);
+    const {isDarkMode, isFancyMode, featureToggleProcrasstinate} = appState;
     const readText = isFancyMode ? 'To read mode' : 'To fancy mode';
-    const readIcon = isFancyMode ? <LucideNotebookText /> : <LucideSparkles />;
+    const readIcon = isFancyMode ? <LucideNotebookText/> : <LucideSparkles/>;
     const schemeText = isDarkMode ? 'To light mode' : 'To dark mode';
-    const schemeIcon = isDarkMode ? <LucideSunMedium /> : <LucideMoonStar />;
+    const schemeIcon = isDarkMode ? <LucideSunMedium/> : <LucideMoonStar/>;
     const clickPrintHandler = () => window?.print();
     const clickReadHandler = () => {
         const next = !isFancyMode;
@@ -48,27 +46,30 @@ export const CvQrButtons = ({}: TCvQrButtonsProps) => {
     const [width] = useResize();
     const isMobile = width <= 1024;
     const procrastinateText = 'Procrastinate!';
-    const procrastinateIcon = <LucideMessageCircleQuestion />;
+    const procrastinateIcon = <LucideMessageCircleQuestion/>;
     return (
         <div className={classNames(styles.CvQrButtons, '__screen-only')}>
-            <MenuButton text={'Print CV'} onClick={clickPrintHandler} icon={<LucidePrinter />}/>
+            <MenuButton text={'Print CV'} onClick={clickPrintHandler} icon={<LucidePrinter/>}/>
             {!isMobile && <MenuButton text={readText} onClick={clickReadHandler} icon={readIcon}/>}
             <MenuButton text={schemeText} onClick={clickSchemeHandler} icon={schemeIcon}/>
-            <Dialog>
-                <DialogTrigger>
-                    <MenuButton text={procrastinateText} icon={procrastinateIcon}/>
-                </DialogTrigger>
-                <DialogContent className={styles.ProcrastinateModalContent}>
-                    <ScrollArea className={classNames(styles.ProcrastinateModalScrollable, 'inverted')}>
-                        <DialogHeader className={styles.ProcrastinateModalHeader}>
-                            <DialogTitle className={styles.ProcrastinateModalTitle}>Some more facts about me </DialogTitle>
-                            <DialogDescription className={styles.ProcrastinateModalDesct}>...if You have some time.</DialogDescription>
-                        </DialogHeader>
-                        <CvProcrastinate />
-                    </ScrollArea>
-                </DialogContent>
-            </Dialog>
-
+            {featureToggleProcrasstinate && (
+                <Dialog>
+                    <DialogTrigger>
+                        <MenuButton text={procrastinateText} icon={procrastinateIcon}/>
+                    </DialogTrigger>
+                    <DialogContent className={styles.ProcrastinateModalContent}>
+                        <ScrollArea className={classNames(styles.ProcrastinateModalScrollable, 'inverted')}>
+                            <DialogHeader className={styles.ProcrastinateModalHeader}>
+                                <DialogTitle className={styles.ProcrastinateModalTitle}>Some more facts about
+                                    me </DialogTitle>
+                                <DialogDescription className={styles.ProcrastinateModalDesct}>...if You have some
+                                    time.</DialogDescription>
+                            </DialogHeader>
+                            <CvProcrastinate/>
+                        </ScrollArea>
+                    </DialogContent>
+                </Dialog>
+            )}
         </div>
     );
 };

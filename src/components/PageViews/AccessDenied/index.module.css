@@ -1,0 +1,22 @@
+.PageAccessDenied {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.BasicText {
+    text-align: center;
+
+    & p, & a {
+        display: block;
+    }
+
+    & p {
+        color: firebrick;
+        padding: .5rem;
+        border: .125rem dashed firebrick;
+    }
+}

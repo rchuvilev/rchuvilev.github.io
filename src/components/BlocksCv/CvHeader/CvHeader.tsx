@@ -23,7 +23,7 @@ export const CvHeader = ({}: TCvHeaderProps) => {
                             <span className={'__desktop-only'}>rchuvilev@gmail.com</span></a></li>
                         <li><a href={"tel:+995558214364"} target="_blank" rel="noopener noreferrer"><LucidePhoneCall/>
                             <span className={'__desktop-only'}>+995558214364</span></a></li>
-                        <li><a href={"https://t.me/rchuvilevm"} target="_blank"
+                        <li><a href={"https://t.me/rchuvilev"} target="_blank"
                                rel="noopener noreferrer"><LucideMessageCircle/>
                             <span className={'__desktop-only'}>@rchuvilev</span></a></li>
                         <li><a href={"https://www.linkedin.com/in/rchuvilev/"} target="_blank"

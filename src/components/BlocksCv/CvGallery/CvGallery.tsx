@@ -62,7 +62,7 @@ export const CvGallery = ({}: TCvGalleryProps) => {
 
     return (
         <section className={classNames(sharedStyles.Section, '__screen-only')}>
-            <h3 className={classNames(styles.embla__title, sharedStyles.SectionTitle)}>Feedback</h3>
+            <h3 className={classNames(styles.embla__title, sharedStyles.SectionTitle)}>Recommendations</h3>
             <div className={classNames(styles.embla)} ref={emblaRef}>
                 <div className={classNames(styles.embla__container)}>
                     {slides.filter(data => !!data.imageUrl).map((slide, index) => (

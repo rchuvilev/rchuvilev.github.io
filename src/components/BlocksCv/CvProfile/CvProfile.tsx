@@ -16,7 +16,7 @@ export const CvProfile = ({}: TCvProfileProps) => {
                 can onboard and adapt to the project without significant time gap.
             </p>
             <p>
-                Looking for remote role, expected compensation is $5500/mo/gross or equivalent. Can legally work in EU.
+                Looking for remote role. Can legally work in EU-based companies (have Latvia permanent residence permit).
             </p>
         </section>
     );
