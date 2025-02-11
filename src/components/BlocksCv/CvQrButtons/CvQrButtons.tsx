@@ -2,7 +2,6 @@ import styles from './index.module.css';
 import {MenuButton} from "@/components/Atoms/MenuButton/MenuButton.tsx";
 import classNames from "classnames";
 import {
-    LucideConstruction,
     LucideMessageCircleQuestion,
     LucideMoonStar,
     LucideNotebookText,
@@ -23,6 +22,7 @@ import {useContext} from "react";
 import {AppContext, TAppContext} from "@/effects/useAppState.tsx";
 import {useResize} from "@/effects/useResize.tsx";
 import {ScrollArea} from "@/components/ui/scroll-area.tsx";
+import {CvProcrastinate} from "@/components/BlocksCv/CvProcrastinate/CvProcrastinate.tsx";
 
 export type TCvQrButtonsProps = {
 
@@ -64,7 +64,7 @@ export const CvQrButtons = ({}: TCvQrButtonsProps) => {
                             <DialogTitle className={styles.ProcrastinateModalTitle}>Some more facts about me </DialogTitle>
                             <DialogDescription className={styles.ProcrastinateModalDesct}>...if You have some time.</DialogDescription>
                         </DialogHeader>
-                        <div><LucideConstruction/><h5>WIP...</h5></div>
+                        <CvProcrastinate />
                     </ScrollArea>
                 </DialogContent>
             </Dialog>
